@@ -151,9 +151,17 @@
 
     .swiper-button-prev {
         transform: translate(-25%, 60px);
+
+        @include breakpoint(lg) {
+            transform: translate(0, 0);
+        }
     }
     .swiper-button-next {
         transform: translate(25%, 60px);
+
+        @include breakpoint(lg) {
+            transform: translate(0, 0);
+        }
     }
 
     .swiper-button-prev::after, .swiper-button-next::after {

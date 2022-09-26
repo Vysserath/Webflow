@@ -1851,9 +1851,21 @@ ul {
   -webkit-transform: translate(-25%, 60px);
           transform: translate(-25%, 60px);
 }
+@media (max-width: 1024px) {
+  .slider .swiper-button-prev {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
 .slider .swiper-button-next {
   -webkit-transform: translate(25%, 60px);
           transform: translate(25%, 60px);
+}
+@media (max-width: 1024px) {
+  .slider .swiper-button-next {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
 }
 .slider .swiper-button-prev::after, .slider .swiper-button-next::after {
   display: -webkit-box;
