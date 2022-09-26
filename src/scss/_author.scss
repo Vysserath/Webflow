@@ -1,0 +1,230 @@
+.author {
+    background-color: $background-light;
+    padding: 180px 0 140px;
+
+    @include breakpoint(lg) {
+        padding: 100px 0;
+    }
+    @include breakpoint(xs) {
+        padding: 50px 0;
+    }
+
+    &__block {
+        width: 50%;
+
+        @include breakpoint(lg) {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        &_info {
+            max-width: 605px;
+
+            @include breakpoint(lg) {
+                max-width: none;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+        width: 545px;
+        height: 640px;
+        border: 10px solid $yellow;
+
+        @include breakpoint(lg) {
+            margin: 0 auto 25px;
+        }
+        @include breakpoint(xs) {
+            width: 50%;
+            height: auto;
+            border: 5px solid $yellow;
+        }
+
+        img {
+            position: absolute;
+            left: -40px;
+            top: -40px;
+            filter: drop-shadow(0px 0px 20px rgba(27, 55, 100, 0.3));
+
+            @include breakpoint(lg) {
+                left: -30px;
+                top: -30px;
+            }
+            @include breakpoint(xs) {
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    &__title {
+        position: relative;
+        font-weight: 400;
+        font-size: 42px;
+        line-height: 50px;
+        color: $navy;
+        margin: 0 0 59px;
+
+        @include breakpoint(xs) {
+            font-size: 32px;
+            line-height: 44px;
+            margin-bottom: 40px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            top: calc(100% + 23px);
+            background-color: $yellow;
+        }
+    }
+
+    &__text {
+        display: block;
+        font-family: $inter;
+        max-width: 560px;
+        font-size: 19px;
+        line-height: 34px;
+        color: #969AA0;
+        margin-bottom: 33px;
+
+        @include breakpoint(lg) {
+            max-width: none;
+        }
+        @include breakpoint(xs) {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__stats {
+        max-width: 575px;
+        padding: 0 0 0 12px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        
+        @include breakpoint(lg) {
+            margin: 0 auto;
+            max-width: 750px;
+        }
+        @include breakpoint(xs) {
+            max-width: none;
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    &__stats-item {
+        position: relative;
+
+        &:nth-child(n+2)::before {
+            position: absolute;
+            content: '';
+            width: 1px;
+            height: 98px;
+            background-color: $yellow;
+            top: 0;
+            left: -37px;
+
+            @include breakpoint(xs) {
+                display: none;
+            }
+        }
+    }
+
+    &__number {
+        display: block;
+        font-size: 54px;
+        line-height: 77px;
+        color: $navy;
+        margin-bottom: 1px;
+
+        @include breakpoint(xs) {
+            font-size: 32px;
+            line-height: 44px;
+        }
+    }
+
+    &__info {
+        display: block;
+        font-family: $inter;
+        font-size: 17px;
+        line-height: 22px;
+        color: #969AA0;
+        margin-bottom: 54px;
+
+        @include breakpoint(xs) {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__qr-block {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $navy;
+        padding: 15px 20px;
+        max-width: 485px;
+
+        @include breakpoint(lg) {
+            max-width: 500px;
+        }
+    }
+
+    &__qr-img {
+        width: 130px;
+        margin-right: 40px;
+    }
+
+    &__profile {
+        padding-top: 22px;
+    }
+
+    &__name {
+        display: block;
+        font-size: 22px;
+        line-height: 26px;
+        color: $yellow;
+        margin-bottom: 10px;
+    }
+
+    &__mail {
+        display: block;
+        font-family: $inter;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.19px;
+        color: $blue;
+        margin-bottom: 4px;
+    }
+
+    &__tel {
+        font-family: $inter;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.19px;
+        color: $blue;
+    }
+
+    a {
+        font-family: $inter;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.19px;
+        color: $blue;
+        transition: all 0.2s ease-in-out;
+        
+        &:hover {
+            color: $yellow;
+        }
+    }
+}

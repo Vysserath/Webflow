@@ -1,0 +1,182 @@
+.welcome {
+    background-color: $navy;
+    padding-bottom: 100px;
+
+    @include breakpoint(lg) {
+        padding-bottom: 75px;
+    }
+
+    &__block {
+        
+        &_info{
+            width: calc(100% - 592px);
+
+            @include breakpoint(lg) {
+                margin: 0 auto;
+                width: 592px;
+            }  
+        }
+
+        &_img{
+            max-width: 592px;
+
+            @include breakpoint(lg) {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__subtitle {
+        position: relative;
+        display: block;
+        font-size: 21px;
+        line-height: 36px;
+        letter-spacing: 1.2px;
+        color: $white;
+        margin: 0 0 10px 50px;
+
+        @include breakpoint(xs) {
+            font-size: 16px;
+            line-height: 24px;
+            margin: 0 0 5px 35px;
+        }
+
+        
+        &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            height: 2px;
+            width: 35px;
+            background-color: $yellow;
+            left: -50px;
+            top: 50%;
+
+            @include breakpoint(xs) {
+                width: 25px;
+                left: -35px;
+            }
+        }
+    }
+
+    &__title {
+        margin: 0 0 24px;
+        max-width: 520px;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 78px;
+        letter-spacing: 1.3px;
+        color: $white;
+
+        @include breakpoint(lg) {
+            max-width: none;
+        }
+        @include breakpoint(xs) {
+            font-size: 32px;
+            line-height: 44px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__text {
+        font-family: $inter;
+        max-width: 565px;
+        font-size: 18px;
+        line-height: 28px;
+        color: $blue;
+        margin-bottom: 42px;
+
+        @include breakpoint(lg) {
+            max-width: none;
+        }
+        @include breakpoint(xs) {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__buttons {
+        margin-bottom: 47px;
+
+        @include breakpoint(lg) {
+            margin: 0 auto 40px;
+        }
+        @include breakpoint(xs) {
+            margin-bottom: 0;
+        }
+        
+    }
+
+    &__button {
+        margin-right: 51px;
+
+        @include breakpoint(xs) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__stats {
+        max-width: 525px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        
+        @include breakpoint(lg) {
+            margin: 0 auto 25px;
+        }
+        @include breakpoint(xs) {
+            max-width: none;
+        }
+    }
+
+    &__stats-item {
+        @include breakpoint(xs) {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        max-width: 592px;
+    }
+
+    .container {
+        padding: 0 47px;
+    }
+}
+
+.stats {
+
+    &__name {
+        display: block;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: 0.48px;
+        margin-bottom: 12px;
+
+        @include breakpoint(xs) {
+            display: inline;
+        }
+    }
+
+    &__info {
+        font-family: $inter;
+        display: block;
+        font-size: 17px;
+        line-height: 27px;
+        color: $blue;
+        margin-left: 26px;
+
+        @include breakpoint(xs) {
+            display: inline-block;
+            margin: 0 0 0 auto;
+        }
+    }
+
+    .icon-circle-solid:before {
+        font-size: 16px;
+        margin-right: 10px;
+        color: $yellow;
+    }
+}

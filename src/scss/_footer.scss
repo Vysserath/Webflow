@@ -1,0 +1,185 @@
+.footer {
+    background-color: $navy;
+    padding: 92px 0 24px;
+
+    @include breakpoint(lg) {
+        padding: 50px 0 25px;
+    }
+
+    .container_flex {
+        align-items: flex-start;
+    }
+
+    &__block {
+        
+        @include breakpoint(md) {
+            width: 50%;
+            margin-bottom: 25px;
+        }
+        @include breakpoint(xs) {
+            width: 100%;
+        }
+
+        &_logo {
+            @include breakpoint(md) {
+                order: 1;
+            }
+        }
+
+        &_list {
+            @include breakpoint(md) {
+                order: 3;
+            }
+        }
+
+        &_contacts {
+            @include breakpoint(md) {
+                order: 2;
+            }
+            @include breakpoint(xs) {
+                order: 4;
+            }
+        }
+    }
+
+    &__img {
+        max-width: 119px;
+        margin-bottom: 21px;
+    }
+
+    &__social {
+        display: flex;
+
+        @include breakpoint(lg) {
+            flex-direction: column;
+            
+            .social-item {
+                margin-bottom: 10px;
+            }
+        }
+        @include breakpoint(md) {
+            flex-direction: row;
+        }
+    }
+
+    &__title {
+        margin: 0 0 24px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 34px;
+        letter-spacing: 0.384px;
+        color: #FFFFFF;
+    }
+
+    &__list {
+        margin: 0;
+        padding-left: 38px;
+    }
+
+    &__list-item {
+        margin-bottom: 9px;
+    }
+
+    &__list-link {
+        position: relative;
+        font-family: $inter;
+        font-size: 18px;
+        line-height: 31px;
+        letter-spacing: 0.18px;
+        color: $blue;
+        transition: all 0.2s ease-in-out;
+
+        @include breakpoint(lg) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        &::before {
+            position: absolute;
+            content: url(../img/footer_dots.svg);
+            left: -29px;
+            top: -8px;
+        }
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+
+    &__rights{
+        padding-top: 95px;
+        font-family: $inter;
+        text-align: center;
+        font-size: 17px;
+        line-height: 26px;
+        letter-spacing: 0.17px;
+
+        @include breakpoint(lg) {
+            padding-top: 50px;
+        }
+    }
+
+    &__copyright {
+        color: $blue;
+    }
+
+    &__copyright-link {
+        color: $white;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        grid-template-rows: 2fr 1fr 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+    &__contact {
+        font-size: 18px;
+        line-height: 27px;
+        letter-spacing: 0.36px;
+        color: #FFFFFF;
+    }
+
+    &__info {
+        font-family: $inter;
+        font-size: 17px;
+        line-height: 27px;
+        color: $blue;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: $yellow;
+        }
+        @include breakpoint(lg) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        &_adress{
+            max-width: 235px;
+
+            &:hover {
+                color: $blue;
+            }
+        }   
+    }
+
+    .social-item {
+        border: 1px solid $yellow;
+        color: $white;
+        background-color: transparent;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: $navy;
+            background-color: $yellow;
+        }
+    }
+}

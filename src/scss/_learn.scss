@@ -1,0 +1,121 @@
+.learn {
+    padding: 136px 0 140px;
+
+    @include breakpoint(lg) {
+        padding: 75px 0 50px;
+    }
+
+    &__title {
+        position: relative;
+        font-weight: 400;
+        font-size: 42px;
+        line-height: 50px;
+        text-align: center;
+        color: $navy;
+        margin: 0 0 116px;
+
+        @include breakpoint(xs) {
+            font-size: 32px;
+            line-height: 44px;
+            margin-bottom: 65px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            transform: translateX(-50%);
+            left: 50%;
+            top: calc(100% + 23px);
+            background-color: $yellow;
+        }
+    }
+
+    &__block {
+        width: 50%;
+
+        @include breakpoint(lg) {
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        &_cards {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            @include breakpoint(lg) {
+                order: 2;
+            }
+        }
+
+        &_photo {
+            position: relative;
+            max-width: 555px;
+            height: 652px;
+            border: 10px solid $yellow;
+
+            @include breakpoint(lg) {
+                order: 1;
+                margin-bottom: 10px;
+            }
+            @include breakpoint(xs) {
+                max-width: 60%;
+                height: auto;
+            }
+
+            img {
+                position: absolute;
+                left: -30px;
+                top: -30px;
+
+                @include breakpoint(xs) {
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
+
+    &__card {
+        background-color: $background-light;
+        width: calc(50% - 30px);
+        margin: 0 15px 30px;
+        padding: 30px;
+
+        @include breakpoint(xs) {
+            width: 100%;
+            margin: 0 5px 15px;
+        }
+    }
+
+    &__number {
+        display: inline-block;
+        padding: 11px 13px;
+        background-color: $yellow;
+        font-size: 23px;
+        line-height: 29px;
+        border-radius: 50%;
+        color: $navy;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-size: 24px;
+        line-height: 34px;
+        color: $navy;
+
+        @include breakpoint(md) {
+            font-size: 19px;
+            line-height: 30px;
+        }
+    }
+
+    &__img {
+        max-width: 535px;
+    }
+}

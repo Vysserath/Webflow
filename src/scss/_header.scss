@@ -1,0 +1,217 @@
+.header {
+    background-color: $navy;
+    padding: 22px 0 121px;
+
+    @include breakpoint(lg) {
+        padding: 22px 0 50px;
+    }
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        &:nth-child(2) {
+            @include breakpoint(xs) {
+                padding-top: 30px;
+                width: 80%;
+                position: absolute;
+                z-index: 10;
+                flex-direction: column;
+                align-items: start;
+                background-color: $background-light;
+                border: 1px solid $black;
+                top: 0;
+                left: 0;
+                transition: all 0.3s ease 0s;
+                transform: translate(-100%, 0);
+            }  
+        }
+        &:nth-child(2).active {
+            @include breakpoint(xs) {
+                transform: translate(0, 0);
+            }  
+        }
+    }
+
+    &__logo {
+        margin-right: 38px;
+
+        @include breakpoint(md) {
+            margin-right: 20px;
+        }
+    }
+
+    &__logo-img {
+        max-width: 119px;
+    }
+
+    &__social {
+        display: flex;
+
+        @include breakpoint(md) {
+            display: none;
+        }
+    }
+
+    &__cart {
+        display: block;
+        color: $black;
+        margin-left: 40px;
+        transition: all 0.2s ease-in-out;
+        
+        @include breakpoint(lg) {
+            margin-left: 30px;
+        }
+
+        @include breakpoint(xs) {
+            font-size: 30px;
+            margin:0 auto 20px;
+            color: $navy;
+        }
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+
+    &__button-holder {
+        margin-left: 51px;
+        
+        @include breakpoint(lg) {
+            margin-left: 30px; 
+        }
+        @include breakpoint(md) {
+            margin-left: 25px;
+        }
+        @include breakpoint(xs) {
+            margin: 0 auto 10px;
+        }
+    }
+
+    .burger{
+        display: none;
+
+        @include breakpoint(xs) {
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 18px;
+        }
+
+        &::before, &::after, span{
+            @include breakpoint(xs) {
+                position: absolute;
+                left: 0;
+                height: 10%;
+                width: 100%;
+                transition: all 0.2s ease-in-out 0s;
+                background-color: #fff;
+            }
+        }
+        &::before, &::after{
+            @include breakpoint(xs) {
+                content: '';
+            }
+        }
+        &::before{
+            @include breakpoint(xs) {
+                top: 0;
+            }
+        }
+        &::after{
+            @include breakpoint(xs) {
+                bottom: 0;
+            }
+        }
+        span {
+            @include breakpoint(xs) {
+                top: 50%;
+                transform: scale(1) translate(0, -50%);
+            }
+        }
+
+        &.active span{
+            transform: scale(0) translate(0, -50%);
+        }
+        &.active::before{
+            top: 50%;
+            transform: rotate(-45deg) translate(0, -50%);
+        }
+        &.active::after{
+            bottom: 50%;
+            transform: rotate(45deg) translate(0, 50%);
+        }
+    }
+}
+
+.nav {
+    @include breakpoint(xs) {
+        width: 100%;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-family: $inter;
+        font-size: 17px;
+        line-height: 26px;
+        letter-spacing: 0.17px;
+
+        @include breakpoint(lg) {
+            padding: 0;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        @include breakpoint(xs) {
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__list-item {
+        margin-left: 48px;
+
+        @include breakpoint(lg) {
+            margin-left: 20px;
+        }
+        @include breakpoint(xs) {
+            margin:0 0 10px;
+        }
+    }
+
+    &__list-link {
+        color: $background-light;
+        transition: all 0.2s ease-in-out;
+        
+        @include breakpoint(xs) {
+            display: block;
+            color: $navy;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    width: 45px;
+    height: 45px;
+    background-color: $white;
+    color: #141414;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        color: $navy;
+        background-color: $yellow;
+    }
+}

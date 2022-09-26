@@ -1,0 +1,167 @@
+.knowledge {
+    background-color: $background-light;
+    padding: 116px 0 130px;
+
+    @include breakpoint(lg) {
+        padding: 75px 0 50px;
+    }
+
+    &__title {
+        position: relative;
+        font-weight: 400;
+        font-size: 42px;
+        line-height: 50px;
+        text-align: center;
+        color: $navy;
+        margin: 0 0 96px;
+
+        @include breakpoint(lg) {
+            margin: 0 0 75px;
+        }
+        @include breakpoint(xs) {
+            font-size: 32px;
+            line-height: 44px;
+            margin-bottom: 65px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            transform: translateX(-50%);
+            left: 50%;
+            top: calc(100% + 23px);
+            background-color: $yellow;
+        }
+    }
+
+    &__card {
+        width: calc(50% - 30px);
+        margin: 0 15px 40px;
+        padding: 42px 40px 44px;
+        background-color: $white;
+
+        @include breakpoint(md) {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+    }
+
+    &__theme {
+        display: block;
+        font-size: 24px;
+        line-height: 29px;
+        color: $navy;
+        margin-bottom: 21px;
+    }
+
+    &__text {
+        font-family: $inter;
+        font-size: 19px;
+        line-height: 32px;
+        color: #969AA0;
+        margin-bottom: 10px;
+
+        @include breakpoint(lg) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &__info {
+        font-size: 22px;
+        line-height: 31px;
+        color: $navy;
+        margin-right: 10px;
+
+        @include breakpoint(lg) {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+
+    &__amount {
+        font-family: $inter;
+        font-size: 17px;
+        line-height: 27px;
+        color: #969AA0;
+
+        @include breakpoint(lg) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &_margin {
+            margin-right: 45px;
+
+            @include breakpoint(lg) {
+                margin-right: 150px;
+            }
+            @include breakpoint(xs) {
+                margin-right: 50px;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        font-family: $inter;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        color: #969AA0;
+        transition: all 0.2s ease-in-out;
+        
+        &:last-of-type{
+            display: inline-block;
+        }
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+
+    &__link-description {
+        font-family: $inter;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 0.19px;
+        color: $navy;
+    }
+
+    &__button {
+        margin: 0 auto 34px;
+        padding: 23px 92px;
+        font-size: 19px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 0.57px;
+
+        @include breakpoint(xs) {
+            padding: 18px 70px;
+        }
+
+        &:hover {
+            color: $navy;
+        }
+    }
+
+    .wrapper {
+        padding-top: 30px;
+        text-align: center;
+
+        @include breakpoint(lg) {
+            padding-top: 15px;
+        }
+    }
+
+    .icon-circle-solid:before {
+        font-size: 16px;
+        margin-right: 10px;
+        color: $yellow;
+    }
+}

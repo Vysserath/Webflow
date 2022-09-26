@@ -1,0 +1,82 @@
+.copy {
+    background-color: $navy;
+    padding: 70px 0;
+
+    @include breakpoint(lg) {
+        padding: 50px 0;
+    }
+
+    &__block {
+        width: 50%;
+
+        @include breakpoint(xs) {
+            width: 100%;
+        }
+
+        &_info {
+            @include breakpoint(xs) {
+                order:2;
+            }
+        }
+
+        &_img {
+            max-width: 560px;
+
+            @include breakpoint(xs) {
+                    order: 1;
+                    margin-bottom: 25px;
+            }
+        }
+    }
+
+    &__title {
+        position: relative;
+        font-weight: 400;
+        font-size: 45px;
+        line-height: 54px;
+        margin: 0 0 54px;
+
+        @include breakpoint(xs) {
+            font-size: 32px;
+            line-height: 44px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            top: calc(100% + 23px);
+            background-color: $yellow;
+        }
+    }
+
+    &__text {
+        font-family: $inter;
+        max-width: 540px;
+        font-size: 19px;
+        line-height: 28px;
+        color: #B4C7E7;
+        margin-bottom: 27px;
+
+        @include breakpoint(lg) {
+            font-size: 15px;
+            line-height: 24px;
+        }
+    }
+
+    &__button {
+        color: $white;
+        background: none;
+
+        &:hover {
+            color: $navy;
+            background-color: $yellow;;
+        }
+    }
+
+    &__img {
+        max-width: 560px;
+    }
+}
