@@ -178,6 +178,11 @@
         font-size: 22px;
         line-height: 33px;
         margin-bottom: 13px;
+
+        @include breakpoint(xxs) {
+            font-size: 20px;
+            line-height: 30px;
+        }
     }
 
     &__comment {
@@ -195,5 +200,10 @@
     &__img {
         width: 85px;
         margin-right: 20px;
+
+        @include breakpoint(xxs) {
+            width: 70px;
+            margin-right: 10px;
+        }
     }
 }

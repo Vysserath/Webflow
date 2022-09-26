@@ -21,6 +21,10 @@
             font-size: 32px;
             line-height: 44px;
         }
+        @include breakpoint(xxs) {
+            font-size: 20px;
+            line-height: 24px;
+        }
 
         &::before {
             position: absolute;
@@ -32,6 +36,11 @@
             left: 50%;
             top: calc(100% + 23px);
             background-color: $navy;
+
+            @include breakpoint(xxs) {
+                height: 2px;
+                top: calc(100% + 10px);
+            }
         }
     }
 
@@ -53,6 +62,11 @@
             font-size: 14px;
             line-height: 20px;
         }
+        @include breakpoint(xss) {
+            font-size: 12px;
+            line-height: 18px;
+        }
+        
     }
 
     &__input {

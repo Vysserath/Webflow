@@ -6,6 +6,10 @@
         padding: 100px 0;
     }
 
+    @include breakpoint(xxs) {
+        padding: 50px 0;
+    }
+
     &__title {
         position: relative;
         font-weight: 400;

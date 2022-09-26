@@ -222,6 +222,11 @@
         letter-spacing: 0.19px;
         color: $blue;
         transition: all 0.2s ease-in-out;
+
+        @include breakpoint(xxs) {
+            font-size: 14px;
+            line-height: 18px;
+        }
         
         &:hover {
             color: $yellow;

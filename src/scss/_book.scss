@@ -7,6 +7,9 @@
     @include breakpoint(xs) {
         padding: 75px 0 25px;
     }
+    @include breakpoint(xxs) {
+        padding: 25px 0;
+    }
 
     &__title {
         position: relative;
@@ -113,6 +116,10 @@
             line-height: 20px;
             margin-bottom: 10px;
         }
+        @include breakpoint(xxs) {
+            font-size: 12px;
+            line-height: 18px;
+        }
     }
 
     &__type {
@@ -134,6 +141,10 @@
         &:hover{
             background-color: $yellow;
             color: $navy;
+        }
+
+        @include breakpoint(xxs) {
+            padding: 10px 20px;
         }
     }
 

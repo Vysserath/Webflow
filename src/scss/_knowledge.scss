@@ -5,6 +5,9 @@
     @include breakpoint(lg) {
         padding: 75px 0 50px;
     }
+    @include breakpoint(xxs) {
+        padding: 50px 0;
+    }
 
     &__title {
         position: relative;
@@ -81,6 +84,10 @@
             font-size: 20px;
             line-height: 28px;
         }
+        @include breakpoint(xxs) {
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 
     &__amount {
@@ -92,6 +99,10 @@
         @include breakpoint(lg) {
             font-size: 16px;
             line-height: 20px;
+        }
+        @include breakpoint(xxs) {
+            font-size: 12px;
+            line-height: 18px;
         }
 
         &_margin {
@@ -114,6 +125,11 @@
         text-align: center;
         color: #969AA0;
         transition: all 0.2s ease-in-out;
+
+        @include breakpoint(xxs) {
+            font-size: 16px;
+            line-height: 20px;
+        }
         
         &:last-of-type{
             display: inline-block;
@@ -131,6 +147,11 @@
         text-align: center;
         letter-spacing: 0.19px;
         color: $navy;
+
+        @include breakpoint(xxs) {
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 
     &__button {
@@ -143,6 +164,9 @@
 
         @include breakpoint(xs) {
             padding: 18px 70px;
+        }
+        @include breakpoint(xxs) {
+            padding: 10px 20px;
         }
 
         &:hover {
@@ -163,5 +187,9 @@
         font-size: 16px;
         margin-right: 10px;
         color: $yellow;
+
+        @include breakpoint(xxs) {
+            font-size: 12px;
+        }
     }
 }
